@@ -1,0 +1,100 @@
+@import "tailwindcss";
+/* 🔹 Glassmorphism Effect */
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  
+  /* 🔹 Input Field Styling */
+  .input-field {
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: border-color 0.3s ease-in-out, background 0.3s ease-in-out;
+  }
+  
+  /* 🔹 Label Styling (Floating Effect) */
+  .input-label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+  }
+  
+  /* 🔹 Focus Effect (Field Highlight) */
+  .input-field:focus {
+    border-color: #90cbd4;
+    background: white;
+  }
+  
+  .input-field:focus + .input-label,
+  .input-field:not(:placeholder-shown) + .input-label {
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+    color: #73cbd6;
+  }
+  
+  /* 🔹 Button Styling */
+  .gradient-button {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #7c8a97, #859378);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gradient-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #0f0f0f, #d6d5d4);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .gradient-button:hover::before {
+    left: 0;
+  }
+  
+  .gradient-button:hover {
+    transform: scale(1.02);
+  }
+  
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
+  
+  .justify-start {
+    justify-content: flex-start;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .md\:justify-start {
+    @media (min-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
+  
+
